@@ -11,3 +11,4 @@
 *.editorconfig
 *AssemblyAttributes.cs
 *AssemblyInfo.cs
+*.CopyComplete
