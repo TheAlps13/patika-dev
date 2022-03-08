@@ -1,0 +1,13 @@
+*.sln
+*.csproj
+*.json
+*.txt
+*.exe
+*.dll
+*.pdb
+*.cache
+*.props
+*.targets
+*.editorconfig
+*AssemblyAttributes.cs
+*AssemblyInfo.cs
