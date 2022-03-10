@@ -40,32 +40,49 @@ namespace WebApi.Controllers
             }
         };
 
-       /* [HttpGet]
+        [HttpGet]
         public List<Book> GetBooks()
         {
             var bookList = BookList;
             return bookList;
-        }*/
+        }
 
         [HttpGet("{id}")]
         public Book GetBookById(int id)
         {
-            foreach(Book book in BookList)
-                if(book.Id == id)
+            foreach (Book book in BookList)
+                if (book.Id == id)
                     return book;
 
             return BookList[0];
         }
 
-         [HttpGet]
-        public Book Get([FromQuery] int id)
+
+        [HttpPost]
+        public IActionResult AddBook([FromBody] Book newBook)
         {
-            foreach(Book book in BookList)
-                if(book.Id == id)
-                    return book;
-                    
-            return BookList[0];
+            var book = BookList.SingleOrDefault(x => x.Title == newBook.Title);
+
+            if (book is not null)
+                return BadRequest();
+
+            BookList.Add(newBook);
+
+            return Ok();
         }
+
+        [HttpPut("{id}")]
+        public IActionResult UpdateBook(int id, [FromBody] Book newBook)
+        {
+            int index = BookList.FindIndex(x => x.Id == id);
+            if(index == -1)
+                return NotFound();
+
+            BookList[index] = newBook;
+            return Ok();
+        }
+
+
     }
 
 
