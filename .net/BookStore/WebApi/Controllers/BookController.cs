@@ -76,13 +76,22 @@ namespace WebApi.Controllers
         {
             int index = BookList.FindIndex(x => x.Id == id);
             if(index == -1)
-                return NotFound();
+                return BadRequest();
 
             BookList[index] = newBook;
             return Ok();
         }
 
-
+        [HttpDelete("{title}")]
+        public IActionResult DeleteBook(string title)
+        {
+            int index = BookList.FindIndex(x => x.Title == title);
+            if(index == -1)
+                return BadRequest();
+            
+            BookList.RemoveAt(index);
+            return Ok();
+        }
     }
 
 
