@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+
+<!--The important tags that can be used between head tag-->
+<head>
+
+    <title>
+        Hello Web
+    </title>
+
+    <!-- To redirect the page after 5 seconds using http pragma directive -->
+    <meta http-equiv="refresh" content="5;https://www.patika.dev" />
+
+    <meta charset="UTF-8" />
+    <!-- This is important to render the html properly in almost every device screen-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- To add external css, here rel means relation(stylesheet here) and href means html reference -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="test.bmp" type="image/x-icon">
+    <!-- To load scripts anonymously -->
+    <script src="myJSc.js" async></script>
+    <!-- For scripts to run after loading html, both async and defer tags can only used with external scripts -->
+    <script src="myJs.js" async defer></script>
+    <!-- Set crossorigin attribute to use-credentials to send user data for loading static media from seperate domain -->
+    <script src="myJs.js" crossorigin="use-credentials" ></script>
+    <!-- Set crossorigin attribute to anonymous to load static media from seperate domain without sending credentials -->
+    <script src="myJs.js" crossorigin="anonymous" ></script>
+    
+    <!-- While loading script from cross origin, integrity attribute can be used to maintain script integrity and security -->
+    <script src="myJs.js" crossorigin="anonymous" integrity="sha3413ssad123" ></script>
+
+    <!--To determine the script type use type attribute-->
+    <script type="application/javascript"></script>
+
+    <script type="application/ecmascript"></script>
+
+
+    
+</head>
+
+</html>
