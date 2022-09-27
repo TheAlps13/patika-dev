@@ -1,2 +1,2 @@
 # patika-dev
-Patika-dev' e ait alıştırmalar ve ödevleri topladığım repo
+It's the repo that contains examples and homeworks from patika-dev
