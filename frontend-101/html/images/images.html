@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+</head>
+
+<body>
+    <!-- tf2 gif -->
+
+    <picture>
+        <source srcset="tf21.png" media="(min-width: 800px)" />
+        <img src="tf2.gif" title="Tf2 image" alt="tf2 funny heavy image" width="700px" height="700px" border="5"
+        align="left" usemap="#random-map" onload="imgLoaded()" />
+
+    </picture>
+   
+
+    <!-- Declaring a sample map(no, its not that useful) -->
+    <map name="random-map">
+        <area shape="circle" coords="220 300 100 150"
+            href="https://www.google.com/search?q=tf2+funny+images&sxsrf=ALiCzsZZlezRVzRL3bf81I1ridGGxAe41Q:1664398326049&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi5qvT3rrj6AhXDX_EDHRKLDDAQ_AUoAXoECAEQAw&biw=1920&bih=955"
+            alt="funny tf2 images">
+    </map>
+
+    <script>
+        function imgLoaded(){
+            alert("Image loaded !");
+        }
+    </script>
+</body>
+
+</html>
