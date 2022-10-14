@@ -1,0 +1,53 @@
+html {
+    background-color: rgb(21, 146, 155);
+}
+
+body {
+    width: 640px;
+    margin: 0 auto;
+    padding: 0px 20px;
+    border: thick double rgb(78, 78, 90);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+article {
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.duck-color {
+    color: rgb(238, 241, 26);
+}
+
+.koala-color {
+    color: rgb(70, 69, 69);
+}
+
+.doge-color {
+    color: rgb(219, 141, 68);
+}
+
+.xlarge-red-em {
+    font-size: 33px;
+    color: rgb(177, 0, 0);
+    font-style: italic;
+}
+
+.roman-large {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+.alignright-large-em-bold {
+    text-align: right;
+    font-style: italic;
+    font-size: 25px;
+    font-weight: bold;
+}
