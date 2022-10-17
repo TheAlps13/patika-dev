@@ -1,0 +1,154 @@
+h1 {
+    background-color: rgb(250, 200, 107);
+}
+
+/* Select Everything....EVERYTHING 
+*{
+    background-color: black;
+} */
+
+/* Make every element italic inside the divs */
+div * {
+    font-style: italic;
+}
+
+/* Attribute Selectors */
+
+/* This will select all the elements with that has name attribute */
+[title] {
+    color: red;
+}
+
+/* This will select the elements with .btn class and "disabled" attribute*/
+.btn[disabled] {
+    color: purple;
+}
+
+/* This will select all the div elements with "title" attribute */
+div[title] {
+    color: yellow;
+}
+
+
+/* This will select all the items with role="navigation"*/
+[role="navigation"] {
+    background-color: green;
+}
+
+/* This will select all the anchor elements with accesskey="h" */
+a[accesskey="h"] {
+    background-color: blue;
+}
+
+/* This will select elements that has " tfa " (tfa with white spaces around) in their id attribute  */
+[id~="tfa"] {
+    background-color: blue;
+}
+
+/* This will select elements that has "tfa" in their id attribute */
+[id *="tfa"] {
+    background-color: blue;
+}
+
+/* This will select items with id that starts "mp" */
+[id^="mp"] {
+    background-color: brown;
+}
+
+/* This will select items with id that ends with "itn" */
+[id$="itn"] {
+    background-color: purple;
+}
+
+/* This will select anchor elements with href attribute that starts with "https" and contains "wikipedia"*/
+a[href^="https"][href*="wikipedia"] {
+    background-color: aqua;
+}
+
+/* Group Selectors */
+h1,
+h2,
+h3 {
+    background-color: chartreuse;
+}
+
+/* This will select div items with id mp-itn-h2 */
+div#mp-itn-h2 {
+    background-color: black;
+}
+
+/* Child Selectors */
+/* This will select all the h1 elements inside two divs */
+div>div>h1 {
+    background-color: darkred;
+}
+
+/* Descendant Selectors */
+/* This will select all the p elements inside the div */
+div p {
+    background-color: red;
+}
+
+/* General Sibling Selectors */
+/* This will select div elements thats coming after another div element*/
+div~div {
+    background-color: darkblue;
+}
+
+/* Adjacent Sibling Selectors */
+/* This will select li element thats coming after another li*/
+li+li {
+    background-color: green;
+}
+
+/* Pseudo Classes
+Usage = selector:pseudo class{}*/
+
+/* This will select unopened links */
+a[href*="wikipedia"]:link{
+    background-color: cornflowerblue;
+}
+
+/* This will select p elements when mouse is over */
+p:hover{
+    background-color:black;
+}
+
+/* This will select p elements that is clicked */
+p:active{
+    background-color: white;
+}
+
+/* This will select the first p in a div element */
+div>p:first-child{
+    background-color:orchid;
+}
+
+/* This will select the last li in an ul element */
+ul>li:last-child{
+    background-color: crimson;
+}
+
+/* Selects the first word in a block level element */
+p::first-letter{
+    font-size: large;
+    color: lawngreen;
+}
+
+/* Selects the first line in a block level element */
+P::first-line{
+    background-color: yellow;
+}
+
+/* Applies css before selected element */
+p::before{
+    content: "HELLO";
+    color:red;
+}
+
+/* Applies css after selected element */
+p::after{
+    content: "GOOD BYE";
+    color: black;
+    background-color: white;
+}
